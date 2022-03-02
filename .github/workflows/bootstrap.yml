@@ -28,7 +28,7 @@ jobs:
               bzip2 curl file gcc-c++ gcc gcc-gfortran git gnupg2 gzip \
               make patch unzip which xz python3 python3-devel tree \
               cmake bison bison-devel libstdc++-static
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup repo and non-root user
         run: |
           git --version
@@ -58,7 +58,7 @@ jobs:
               bzip2 curl file g++ gcc gfortran git gnupg2 gzip \
               make patch unzip xz-utils python3 python3-dev tree \
               cmake bison
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup repo and non-root user
         run: |
           git --version
@@ -86,7 +86,7 @@ jobs:
               bzip2 curl file gcc-c++ gcc gcc-fortran tar git gpg2 gzip \
               make patch unzip which xz python3 python3-devel tree \
               cmake bison
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup repo and non-root user
         run: |
           git --version
@@ -106,7 +106,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew install cmake bison@2.7 tree
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Bootstrap clingo
         run: |
           source share/spack/setup-env.sh
@@ -125,7 +125,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew install tree
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
@@ -143,7 +143,7 @@ jobs:
       matrix:
         python-version: ['2.7', '3.5', '3.6', '3.7', '3.8', '3.9']
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
